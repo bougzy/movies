@@ -34,7 +34,6 @@
 
 
 
-
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
@@ -43,19 +42,8 @@ const cors = require('cors');
 // MongoDB connection
 mongoose.connect('mongodb+srv://hallmarkmanagement54:hallmarkmanagement54@hallmark.9xddgka.mongodb.net/hallmarkmanagement54');
 
-// Allow requests from multiple routes on the frontend domain, including login and register routes
-const allowedOrigins = [
-  "https://hallmarkmoviesandmystries.vercel.app",
-  "https://hallmarkmoviesandmystries.vercel.app/login",
-  "https://hallmarkmoviesandmystries.vercel.app/register",
-  "https://hallmarkmoviesandmystries.vercel.app/app"
-  // Add other origins as needed
-];
-
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true, // Allow cookies and credentials
-}));
+// CORS configuration
+app.use(cors());
 
 // Define routes for user and admin operations
 app.use('/api/users', require('./routes/usersRoutes')); // This includes the existing routes
