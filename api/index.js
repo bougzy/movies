@@ -43,7 +43,9 @@ const cors = require('cors');
 mongoose.connect('mongodb+srv://hallmarkmanagement54:hallmarkmanagement54@hallmark.9xddgka.mongodb.net/hallmarkmanagement54');
 
 // CORS configuration
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 
 // Define routes for user and admin operations
 app.use('/api/users', require('./routes/usersRoutes')); // This includes the existing routes
