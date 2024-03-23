@@ -28,7 +28,7 @@ const UserLoginComponent = ({ onLogin }) => {
   try {
     // Simulate a delay of 2 seconds (2000 milliseconds)
     setTimeout(async () => {
-      const response = await axios.post('https://sally-backend.vercel.app/api/users/login', formData);
+      const response = await axios.post('https://movies-api-khaki-phi.vercel.app/api/users/login', formData);
       console.log(response.data);
 
       // Pass the login status to the parent component
