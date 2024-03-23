@@ -41,7 +41,7 @@ function AppNavbar({ isLoggedIn }) {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="/" className="fw-bold fs-3 text-white">MOVIES</Nav.Link>
+{/*               <Nav.Link href="/" className="fw-bold fs-3 text-white">MOVIES</Nav.Link> */}
 
               {isLoggedIn ? (
                 <>
@@ -49,7 +49,7 @@ function AppNavbar({ isLoggedIn }) {
                 </>
               ) : (
                 <>
-              <Nav.Link href="#action1" className="fw-bold fs-3 text-white">ABOUT</Nav.Link>
+              
               <Nav.Link href="/register" className="fw-bold fs-3 text-white">REGISTER</Nav.Link>
               <Nav.Link href="/login" className="fw-bold fs-3 text-white">LOGIN</Nav.Link>
             <a
